@@ -9,6 +9,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
+import Footer from "@/components/footer";
+
 export default function RootLayout() {
   return (
     <SidebarProvider>
@@ -18,14 +20,18 @@ export default function RootLayout() {
           <div className="flex items-center gap-2">
             <SidebarTrigger />
             <Separator orientation="vertical" className="h-4" />
-            <span className="text-sm font-medium">ระบบลงทะเบียนเรียน</span>
+            <span className="text-sm font-medium">จัดการวิชาเรียนและสถานะนักศึกษา</span>
           </div>
           <ModeToggle />
         </header>
         <main className="flex-1 p-4">
           <Outlet />
         </main>
-        <footer className="border-t p-4 text-center text-xs text-muted-foreground"></footer>
+        {/* <footer className="border-t p-4 text-center text-xs text-muted-foreground"></footer> */}
+        <Footer
+          firstName="Methas"
+          lastName="Naisoo"
+          studentId="680610708" />
       </SidebarInset>
     </SidebarProvider>
   );

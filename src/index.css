@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
+@import "@fontsource/kanit";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
   --background: oklch(1 0 0);
 
@@ -68,7 +69,7 @@
 
 @theme inline {
   --font-heading: var(--font-sans);
-  --font-sans: 'Geist Variable', sans-serif;
+  --font-sans: 'Kanit', sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -145,8 +146,17 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;}
+    @apply border-border outline-ring/50;
+    font-family: "Kanit", sans-serif;
+  }
+
   body {
-    @apply bg-background text-foreground;}
+    @apply bg-background text-foreground;
+    font-family: "Kanit", sans-serif;
+  }
+
   html {
-    @apply font-sans;}}
+    @apply font-sans;
+    font-family: "Kanit", sans-serif;
+  }
+}
